@@ -8,7 +8,6 @@ import Paper from '@material-ui/core/Paper';
 import Container from '@material-ui/core/Container'
 import api from '../api';
 import TableView from './TableView'
-import Button from '@material-ui/core/Button';
 
 export default class Project extends React.PureComponent{
     constructor(props) {
@@ -32,14 +31,16 @@ export default class Project extends React.PureComponent{
     <Container maxWidth="lg">
         <TableContainer component={Paper}>
             <Table size="small" aria-label="a dense table">
-                <TableRow>
-                    <TableCell>번호</TableCell>
-                    <TableCell>제목</TableCell>
-                    <TableCell align="left">작성자</TableCell>
-                </TableRow>
+                <TableBody>
+                    <TableRow>
+                        <TableCell>번호</TableCell>
+                        <TableCell>제목</TableCell>
+                        <TableCell align="left">작성자</TableCell>
+                    </TableRow>
+                </TableBody>
                 <TableBody>
                     {this.state.results.map((row) =>
-                        <TableView key={row.id} id={row.id} title={row.pro_title} content={row.pro_content}/>
+                        <TableView key={row.id} id={row.id} title={row.pro_title}/>
                     )}
                 </TableBody>
             </Table>
