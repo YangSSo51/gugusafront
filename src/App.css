@@ -1,6 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap');
+
+body{
+    font-family: 'Do Hyeon', sans-serif;
+}
+.font{
+    font-family: 'Do Hyeon', sans-serif;
+}
 .root{
     flex-grow: 1;
 }
 .title{
     flex-grow: 1;
+}
+
+.container_center{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center; 
+    width: 200px;
+    height: 60px;
 }

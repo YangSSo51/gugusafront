@@ -8,7 +8,7 @@ import Container from '@material-ui/core/Container';
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="font">
                 <NavBar/>
                   <BrowserRouter>
                     <Route exact path="/signup" component={SignUp}/>
