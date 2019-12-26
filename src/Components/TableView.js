@@ -16,7 +16,6 @@ export default class TableView extends Component{
                     </Button>
                 </TableCell>
                 <TableCell align="left">{author}</TableCell>
-                </Button>
             </TableRow>
         )
     }

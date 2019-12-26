@@ -12,14 +12,14 @@ export default class NavBar extends React.PureComponent{
     render() {
         return(
             <div className="root">
-                <AppBar position="static">
-                    <Toolbar>
+                <AppBar position="static" className="color">
+                    <Toolbar className="color">
                         <IconButton edge="start" className="menuButton" color="inherit" aria-label="menu">
-                            <MenuIcon />
                         </IconButton>
                         <Typography variant="h6" className="title">
-                            News
+                            GuGuSa
                         </Typography>
+                        <Button color="inherit"><Link className="navButton" to="/Project">Project</Link></Button>
                         <Button color="inherit"><Link className="navButton" to="/SignIn">Login</Link></Button>
                         <Button color="inherit"><Link className="navButton" to="/SignUp">SignUp</Link></Button>
                     </Toolbar>
