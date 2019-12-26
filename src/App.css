@@ -4,3 +4,25 @@
 .title{
     flex-grow: 1;
 }
+.navButton{
+    text-decoration: none;
+    color:white;
+}
+/* signin */
+.paper {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.avatar {
+    margin: 1rem;
+    background-color: #f50057 !important;
+}
+.form {
+    width: 100%;
+    margin-top: 1rem
+}
+.submit {
+    margin: 1rem 0rem 1rem !important;
+}

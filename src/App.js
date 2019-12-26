@@ -9,8 +9,8 @@ class App extends Component {
     render() {
         return (
             <div>
-                <NavBar/>
                   <BrowserRouter>
+                    <NavBar/>
                     <Route exact path="/signup" component={SignUp}/>
                     <Route exact path="/signin" component={SignIn}/>
                     <br></br>
