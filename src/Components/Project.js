@@ -125,8 +125,10 @@ export default class Project extends React.Component{
             <TableRow key={row.name}>
               <TableCell align="left">{row.calories}</TableCell>
               <TableCell component="th" scope="row">
+              <Button href="./signup">
                 {row.name}
-              </TableCell>
+                </Button>              
+                </TableCell>
               <TableCell align="left">{row.calories}</TableCell>
             </TableRow>
           ))}
