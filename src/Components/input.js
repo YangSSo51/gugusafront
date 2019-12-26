@@ -17,12 +17,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function FullWidthGrid() {
-  const classes = useStyles();
-
+export default class Input extends React.Component{
+render() {
   return (
     <Container maxWidth="sm">
-    <div className={classes.root}>
+    <div>
       <Grid container spacing={3}>
         <Grid item xs={12} sm={2}>
         <div class="container_center">
@@ -54,4 +53,5 @@ export default function FullWidthGrid() {
     </div>
     </Container>
   );
+}
 }

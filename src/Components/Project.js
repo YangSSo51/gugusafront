@@ -16,6 +16,7 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button'
+import Container from '@material-ui/core/Container'
 
 const useStyles1 = makeStyles(theme => ({
   root: {
@@ -108,66 +109,31 @@ const useStyles2 = makeStyles({
   },
 });
 
-export default function CustomPaginationActionsTable() {
-  const classes = useStyles2();
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
-
-  const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
-
-  const handleChangePage = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleChangeRowsPerPage = event => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
-  const preventDefault = event => event.preventDefault();
+export default class Project extends React.Component{
+  render() {
   return (
-    <TableContainer component={Paper}>
-      <Table className={classes.table} aria-label="custom pagination table">
+    <Container maxWidth="lg">
+ <TableContainer component={Paper}>
+      <Table size="small" aria-label="a dense table">
+          <TableRow>
+          <TableCell>번호</TableCell>
+            <TableCell>제목</TableCell>
+            <TableCell align="left">작성자</TableCell>
+          </TableRow>
         <TableBody>
-          {(rowsPerPage > 0
-            ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-            : rows
-          ).map(row => (
+          {rows.map(row => (
             <TableRow key={row.name}>
+              <TableCell align="left">{row.calories}</TableCell>
               <TableCell component="th" scope="row">
-              <Button href="./signup">
                 {row.name}
-                </Button>
               </TableCell>
-              <TableCell align="right">{row.calories}</TableCell>
-              <TableCell align="right">{row.fat}</TableCell>
+              <TableCell align="left">{row.calories}</TableCell>
             </TableRow>
           ))}
-
-          {emptyRows > 0 && (
-            <TableRow style={{ height: 53 * emptyRows }}>
-              <TableCell colSpan={6} />
-            </TableRow>
-          )}
         </TableBody>
-        <TableFooter>
-          <TableRow>
-            <TablePagination
-              rowsPerPageOptions={[5, 10, 25, { label: 'All', value: -1 }]}
-              colSpan={3}
-              count={rows.length}
-              rowsPerPage={rowsPerPage}
-              page={page}
-              SelectProps={{
-                inputProps: { 'aria-label': 'rows per page' },
-                native: true,
-              }}
-              onChangePage={handleChangePage}
-              onChangeRowsPerPage={handleChangeRowsPerPage}
-              ActionsComponent={TablePaginationActions}
-            />
-          </TableRow>
-        </TableFooter>
       </Table>
     </TableContainer>
+    </Container>
   );
+}
 }
