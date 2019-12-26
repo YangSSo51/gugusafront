@@ -10,11 +10,11 @@ export default class TableView extends Component{
         return (
             <TableRow key={id}>
                 <TableCell align="left">{id}</TableCell>
-                <Button href='./detail'>
                 <TableCell component="th" scope="row">
-                    {title}
+                    <Button href={format('./detail/{}',id)}>
+                        {title}
+                    </Button>
                 </TableCell>
-                </Button>
                 <TableCell align="left">{author}</TableCell>
             </TableRow>
         )

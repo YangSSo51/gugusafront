@@ -3,12 +3,6 @@ import {Container,Grid,Paper} from "@material-ui/core";
 import api from "../api";
 import DetailView from './detailView'
 
-const dummy_prop = {
-    title:'테스트용 타이틀입니다',
-    content:'테스트용 글입니다',
-    author:'테스터'
-}
-
 export default class detail extends React.PureComponent{
     constructor(props) {
         super(props);
