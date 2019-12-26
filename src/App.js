@@ -14,6 +14,7 @@ class App extends Component {
                     <NavBar/>
                     <Route exact path="/signup" component={SignUp}/>
                     <Route exact path="/signin" component={SignIn}/>
+
                     <br></br>
                     <Container maxWidth="lg">
                     <Route exact path="/project" component={Project}/>

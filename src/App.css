@@ -34,3 +34,15 @@ body{
 .submit {
     margin: 1rem 0rem 1rem !important;
 }
+
+/*detail*/
+.author{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*vertical-align: middle !important;*/
+}
+.detailPaper{
+    padding: 1rem 2rem 4rem
+}
