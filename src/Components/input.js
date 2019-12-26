@@ -1,22 +1,57 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    '& > *': {
-      margin: theme.spacing(1),
-      width: 200,
-    },
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
   },
 }));
 
-export default function BasicTextFields() {
+export default function FullWidthGrid() {
   const classes = useStyles();
 
   return (
-    <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="standard-basic" label="Standard" />
-    </form>
+    <Container maxWidth="sm">
+    <div className={classes.root}>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={2}>
+        <div class="container_center">
+        <Typography variant="caption">
+          제목
+        </Typography> 
+        </div>       
+        </Grid>
+        <Grid item xs={12} sm={10}>
+            <TextField fullWidth id="standard-basic" label="제목" />     
+        </Grid>
+        <Grid item xs={12} sm={2}>
+        <div class="container_center">
+        <Typography variant="caption">
+          내용
+        </Typography>       
+        </div>  
+        </Grid>
+        <Grid item xs={12} sm={10} fullWidth>
+        <TextField
+          id="standard-multiline-static"
+          label="내용"
+          multiline
+          fullWidth
+          rows="20"
+        />        
+        </Grid>
+      </Grid>
+    </div>
+    </Container>
   );
 }
