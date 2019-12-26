@@ -7,9 +7,9 @@ export default class TableView extends Component{
         const {id,title,content,author} = this.props
         return (
             <TableRow key={id}>
-                <TableCell align="left">{title}</TableCell>
+                <TableCell align="left">{id}</TableCell>
                 <TableCell component="th" scope="row">
-                    {content}
+                    {title}
                 </TableCell>
                 <TableCell align="left">{author}</TableCell>
             </TableRow>
