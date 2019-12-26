@@ -13,7 +13,7 @@ class App extends Component {
                     <NavBar/>
                     <Route exact path="/signup" component={SignUp}/>
                     <Route exact path="/signin" component={SignIn}/>
-                    <Route exact path="/detail" component={Detail}/>
+                    <Route exact path="/detail/:id" component={Detail}/>
                     <Route exact path="/project" component={Project}/>
                     <Route exact path="/input" component={input}/>
                   </BrowserRouter>
