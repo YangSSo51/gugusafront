@@ -2,6 +2,7 @@ import React,{Component} from "react";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
 
 export default class TableView extends Component{
     render() {
@@ -9,11 +10,11 @@ export default class TableView extends Component{
         return (
             <TableRow key={id}>
                 <TableCell align="left">{id}</TableCell>
-                <Button href="./detail?id=${id}">
+                <Link to = {'./detail/$id'}>
                 <TableCell component="th" scope="row">
                     {title}
                 </TableCell>
-                </Button>
+                </Link>
                 <TableCell align="left">{author}</TableCell>
             </TableRow>
         )

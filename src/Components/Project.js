@@ -29,6 +29,7 @@ export default class Project extends React.PureComponent{
 
   render() {
   return (
+    <div className="margin">
     <Container maxWidth="lg">
         <TableContainer component={Paper}>
             <Table size="small" aria-label="a dense table">
@@ -45,6 +46,7 @@ export default class Project extends React.PureComponent{
             </Table>
         </TableContainer>
     </Container>
+    </div>
   );
 }
 }
