@@ -5,6 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from 'react-router-dom';
+
 
 export default class NavBar extends React.PureComponent{
     render() {
@@ -18,7 +20,8 @@ export default class NavBar extends React.PureComponent{
                         <Typography variant="h6" className="title">
                             News
                         </Typography>
-                        <Button color="inherit">Login</Button>
+                        <Button color="inherit"><Link className="navButton" to="/SignIn">Login</Link></Button>
+                        <Button color="inherit"><Link className="navButton" to="/SignUp">SignUp</Link></Button>
                     </Toolbar>
                 </AppBar>
             </div>
